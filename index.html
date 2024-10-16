@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh giá phòng khám</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sub-greeting">Chúc Quý khách một ngày tốt lành!</div>
+        <!-- Xóa dòng hướng dẫn -->
+        <!-- <div class="subtext">Quý khách vui lòng đánh giá dịch vụ của chúng tôi</div> -->
+
+        <div id="rating-buttons" class="rating-buttons">
+            <div class="rating-container">
+                <button class="button" onclick="submitRating('Rất hài lòng')">😊</button>
+                <div class="rating-label">Rất hài lòng</div>
+            </div>
+            <div class="rating-container">
+                <button class="button" onclick="submitRating('Hài lòng')">🙂</button>
+                <div class="rating-label">Hài lòng</div>
+            </div>
+            <div class="rating-container">
+                <button class="button" onclick="submitRating('Bình thường')">😐</button>
+                <div class="rating-label">Bình thường</div>
+            </div>
+            <div class="rating-container">
+                <button class="button" onclick="submitRating('Không hài lòng')">🙁</button>
+                <div class="rating-label">Không hài lòng</div>
+            </div>
+            <div class="rating-container">
+                <button class="button" onclick="submitRating('Rất không hài lòng')">😢</button>
+                <div class="rating-label">Rất không hài lòng</div>
+            </div>
+        </div>
+
+        <div id="thank-you-message" class="thank-you-message" style="display: none;"></div>
+
+        <div class="doctor-selection">
+            <div class="doctor-box" onclick="selectRoom('room1')" id="room1-box">
+                <img id="doctor1" src="doctor1.jpg" alt="Bác sĩ Siêu âm 2D-4D" class="doctor-image">
+                <div id="room1-name" class="room-name">Siêu âm 2D-4D</div>
+            </div>
+            <div class="doctor-box" onclick="selectRoom('room2')" id="room2-box">
+                <img id="doctor2" src="doctor2.jpg" alt="Bác sĩ Siêu âm 5D" class="doctor-image">
+                <div id="room2-name" class="room-name">Siêu âm 5D</div>
+            </div>
+            <div class="doctor-box" onclick="selectRoom('room3')" id="room3-box">
+                <img id="doctor3" src="doctor3.jpg" alt="Bác sĩ Khám và thủ thuật" class="doctor-image">
+                <div id="room3-name" class="room-name">Khám và thủ thuật</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

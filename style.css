@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sub-greeting {
+    font-size: 3vw;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Cân đối các biểu tượng khuôn mặt ở vị trí trung tâm, đối xứng */
+.rating-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+}
+
+.button {
+    font-size: 50px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.rating-label {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #555;
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Câu cảm ơn sau khi đánh giá */
+.thank-you-message {
+    font-size: 2vw;
+    color: #4caf50;
+    margin-top: 20px;
+}
+
+/* Bố trí ảnh bác sĩ với tên phòng gần nhau hơn, cân đối */
+.doctor-selection {
+    display: flex;
+    justify-content: center; /* Giữa các khung hình */
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    gap: 5px; /* Khoảng cách giữa các khung hình */
+}
+
+.doctor-box {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, font-size 0.2s;
+}
+
+.doctor-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.room-name {
+    margin-top: 10px;
+    font-size: 1.1vw;
+    font-weight: normal;
+    color: #333;
+    transition: font-size 0.2s, font-weight 0.2s;
+}
+
+.doctor-box.selected .doctor-image {
+    transform: scale(1.2); /* Phóng to hình ảnh khi được chọn */
+}
+
+.doctor-box.selected .room-name {
+    font-size: 1.375vw; /* Tăng 25% */
+    font-weight: bold;
+}
